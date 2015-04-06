@@ -29,7 +29,8 @@ RUN easy_install pip
 RUN pip install supervisor
 
 # Adding the configuration file of the nginx
-COPY nginx /etc/nginx
+COPY nginx/conf.d /etc/nginx/conf.d
+ADD  nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Adding the configuration file of the Supervisor
 ADD supervisord.conf /etc/
