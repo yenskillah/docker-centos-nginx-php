@@ -22,3 +22,11 @@ e.g. docker run --name web1 -p 8500:80 -d centos7-nginx-56
 # if you would like to see supervisor logs/launch docker in the current shell, swap with -it:
 e.g. docker run --name web1 -p 8500:80 -it centos7-nginx-56
 ```
+
+Once you're back at a terminal (when daemonizing) or seeing RUNNING (when in the current shell), open up ap browser to localhost* at the port that you mapped to 80 above:
+
+```bash
+http://localhost:8500
+```
+
+\* If using [boot2docker](https://github.com/boot2docker/boot2docker), run `boot2docker ip` and use that hostname instead of `localhost`.
